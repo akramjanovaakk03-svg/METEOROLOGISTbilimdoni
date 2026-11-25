@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METEOROLOGIST | Atmosfera bilimlari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+
+    <header>
+        <div class="brand">
+            <div class="brand-icon">🌦️</div>
+            <div>
+                <h1>METEOROLOGIST</h1>
+                <p>ATMOSFERA SIRLARI</p>
+            </div>
+        </div>
+        <div class="header-status">
+            <span></span> ILMIY BILIMLAR MAYDONI
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- BOSH SAHIFA -->
+        <section id="homeScreen" class="screen active">
+
+            <div class="hero">
+                <div class="eyebrow">🌤️ METEOROLOGIYA OLAMIGA XUSH KELIBSIZ</div>
+
+                <h2>OSMON<br><span>SIRLARINI BILING!</span></h2>
+
+                <p>
+                    Atmosfera, shamollar, bulutlar, yog‘ingarchilik,
+                    iqlim va tabiiy hodisalar haqidagi bilimlaringizni sinang.
+                </p>
+
+                <div class="statistics">
+                    <div class="stat">
+                        <span>☁️</span>
+                        <strong>48+</strong>
+                        <small>Savollar</small>
+                    </div>
+                    <div class="stat">
+                        <span>🎯</span>
+                        <strong>10</strong>
+                        <small>Har bir testda</small>
+                    </div>
+                    <div class="stat">
+                        <span>🏆</span>
+                        <strong>4</strong>
+                        <small>Darajalar</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-heading">
+                <h3>QIYINLIK DARAJASINI TANLANG</h3>
+                <p>O‘z bilimlaringizni sinashni boshlang.</p>
+            </div>
+
+            <div class="levels">
+                <button class="level" data-level="easy">
+                    <span>🌱</span>
+                    <strong>BOSHLANG‘ICH</strong>
+                    <small>Asosiy tushunchalar</small>
+                    <b>→</b>
+                </button>
+
+                <button class="level" data-level="medium">
+                    <span>🌤️</span>
+                    <strong>O‘RTA</strong>
+                    <small>Tabiiy hodisalar</small>
+                    <b>→</b>
+                </button>
+
+                <button class="level" data-level="hard">
+                    <span>🌪️</span>
+                    <strong>YUQORI</strong>
+                    <small>Murakkab jarayonlar</small>
+                    <b>→</b>
+                </button>
+
+                <button class="level" data-level="expert">
+                    <span>⚡</span>
+                    <strong>EKSPERT</strong>
+                    <small>Professional bilimlar</small>
+                    <b>→</b>
+                </button>
+            </div>
+
+            <div class="record">
+                <span>🏆 ENG YAXSHI NATIJANGIZ</span>
+                <strong id="record">0 / 10</strong>
+            </div>
+
+        </section>
+
+        <!-- TEST OYNASI -->
+        <section id="quizScreen" class="screen">
+
+            <div class="quiz-header">
+                <button id="backButton">← Bosh sahifa</button>
+                <span id="levelName">BOSHLANG‘ICH</span>
+            </div>
+
+            <div class="quiz-stats">
+                <div>
+                    <small>SAVOL RAQAMI</small>
+                    <h3 id="questionNumber">01 / 10</h3>
+                </div>
+
+                <div class="points">
+                    <small>TO‘PLANGAN BALL</small>
+                    <h3 id="score">0</h3>
+                </div>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar"></div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-tag">🌦️ METEOROLOGIK BILIMLAR SINOVI</div>
+
+                <h2 id="question">Savol yuklanmoqda...</h2>
+
+                <div id="answers" class="answers"></div>
+
+                <div id="feedback"></div>
+
+                <button id="nextButton" disabled>
+                    Keyingi savol →
+                </button>
+            </div>
+
+            <div class="quiz-footer">
+                METEOROLOGIST — TABIATNI ANGLASH SAN'ATI
+            </div>
+
+        </section>
+
+        <!-- NATIJA OYNASI -->
+        <section id="resultScreen" class="screen">
+
+            <div class="result-card">
+                <div id="resultIcon" class="result-icon">🏆</div>
+
+                <div class="eyebrow">SINOV YAKUNLANDI</div>
+
+                <h2 id="resultTitle">AJOYIB NATIJA!</h2>
+                <p id="resultMessage"></p>
+
+                <div class="final-score">
+                    <strong id="finalScore">0</strong>
+                    <span>/ 10</span>
+                </div>
+
+                <div class="result-progress">
+                    <div id="resultBar"></div>
+                </div>
+
+                <div class="result-stats">
+                    <div>
+                        <strong id="correct">0</strong>
+                        <small>To‘g‘ri</small>
+                    </div>
+                    <div>
+                        <strong id="wrong">0</strong>
+                        <small>Noto‘g‘ri</small>
+                    </div>
+                    <div>
+                        <strong id="percent">0%</strong>
+                        <small>Natija</small>
+                    </div>
+                </div>
+
+                <div id="newRecord" class="new-record hidden">
+                    🏆 YANGI REKORD!
+                </div>
+
+                <button id="retryButton" class="main-button">
+                    ↻ Qayta test ishlash
+                </button>
+
+                <button id="homeButton" class="home-button">
+                    Bosh sahifaga qaytish
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h3>METEOROLOGIST 🌦️</h3>
+        <p>Atmosfera sirlarini o‘rganing.</p>
+        <p class="author">Loyiha muallifi: AKRAMJONOVA JADRA MARATOVNA</p>
+        <small>© 2026 METEOROLOGIST. Barcha huquqlar himoyalangan.</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
